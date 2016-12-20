@@ -1,8 +1,9 @@
 package com.company;
 
+import java.util.*;
+
 public class Main {
 
-    
     public static void main(String[] args) {
                 Scanner input = new Scanner(System.in);
                 String T [] = new String [9];
@@ -147,55 +148,7 @@ public class Main {
                 return uservalue;
             }
 
-            public static int getcompinput (String G[], String check, int move)
-            {
-                int i;
-                String checkblock;
 
-                if (check.equals("X"))
-                    checkblock = "O";
-                else
-                    checkblock = "X";
-
-                i = possiblewin(G,check);
-                //System.out.println(i + check);
-                if (i != -1)
-                    return i;
-
-                i = possiblewin(G, checkblock);
-                //System.out.println(i + checkblock);
-                if (i != -1)
-                    return i;
-
-                if (G[4].equals("_"))
-                    return 4;
-
-                if (move == 2)
-                    return 0;
-
-                if (move == 3 && G[8].equals("_"))
-                    return 8;
-
-                if (move == 4 && G[4].equals(checkblock))
-                    return 2;
-
-                if (move == 4 && G[4].equals(check))
-                {
-                    if (G[3].equals("_") && G[5].equals("_"))
-                        return 3;
-                    else
-                        return 1;
-
-                }
-
-                for (i=0;i<9;i++)
-                {
-                    if (G[i].equals("_"))
-                        return i;
-                }
-
-                return i ;
-            }
 
             public static int possiblewin (String G[], String check)
             {
@@ -259,6 +212,3 @@ public class Main {
 
         } //class
 
-
-    }
-}
