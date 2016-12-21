@@ -17,7 +17,7 @@ public class Main {
                 System.out.println("Welcome to Narnia's Tic Tac Toe");
                 System.out.println("Instructions: Enter a valid number that corresponds to the cell you desire. The cells are numbered as followed: " );
                 System.out.println(" 0 " + " 1 " + " 2 ");
-                System.out.println(" 3 " + " 4 " + " 5 ");
+                           System.out.println(" 3 " + " 4 " + " 5 ");
                 System.out.println(" 6 " + " 7 " + " 8 ");
                 System.out.println();
 
