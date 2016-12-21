@@ -16,9 +16,9 @@ public class Main {
 
                 System.out.println("Welcome to Narnia's Tic Tac Toe");
                 System.out.println("Instructions: Enter a valid number that corresponds to the cell you desire. The cells are numbered as followed: " );
-                System.out.println(" 0 " + " 1 " + " 2 ");
-                           System.out.println(" 3 " + " 4 " + " 5 ");
-                System.out.println(" 6 " + " 7 " + " 8 ");
+                System.out.println(" 1 " + " 2 " + " 3 ");
+                           System.out.println(" 4 " + " 5 " + " 6 ");
+                System.out.println(" 7 " + " 8 " + " 9 ");
                 System.out.println();
 
                 for (int i=0; i < 9; i++ )
@@ -26,7 +26,7 @@ public class Main {
                     T[i] = "_";
                 }
 
-                while (!done)
+                /*while (!done)
                 {
                     System.out.println("What mode would you like to play? Player vs Player (PvP) or Player vs Computer (PvC) or Computer v Computer (CvC)");
                     System.out.println("Please enter 1 for PvP, please enter 2 for PvC, please enter 3 for CvC");
@@ -36,7 +36,7 @@ public class Main {
                         done = true;
                     else
                         System.out.println("Enter a valid mode");
-                }
+                } */
 
                 while (!gameisover)
                 {
@@ -136,7 +136,7 @@ public class Main {
                     System.out.println("Please enter a value from 0-8 for an empty cell, Player " + check );
                     uservalue = input.nextInt();
                     input.nextLine();
-                    if ((uservalue < 0) || (uservalue > 8))
+                    if ((uservalue < 1) || (uservalue > 9))
                     {
                         System.out.println("Invalid Input - Please enter a valid value");
                     }
@@ -145,7 +145,7 @@ public class Main {
                     else
                         valid = true;
                 }
-                return uservalue;
+                return uservalue - 1;
             }
 
             public static int getcompinput (String G[], String check, int move)
